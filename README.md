@@ -4,7 +4,17 @@ I work with data, and I've learned the numbers rarely lie. The trouble is what w
 
 Most days that means turning a messy flow of information into something people can actually act on. I care less about pretty dashboards and more about whether the thing still works at 5 in the morning when nobody is watching.
 
-**What I'm working on**
+**What I do**
+
+I build the plumbing that moves large amounts of data from where it's born to where it's useful, and I make sure it keeps flowing when things go wrong.
+
+- **Data pipelines at volume:** batch and streaming ingestion, ETL/ELT and orchestration with Airflow, distributed processing with Spark
+- **Unstructured to structured:** turning text, documents and feeds into clean, queryable data with NLP and LLMs
+- **Data modelling:** schemas that still make sense two years later, and SQL that doesn't fall over when the table grows a hundredfold
+- **Analysis and exploration:** Python, pandas and Jupyter for finding out what the data is actually saying
+- **Reliability:** idempotent jobs, backfills, monitoring and alerting, because a pipeline nobody trusts is just an expensive cron job
+
+**What I'm building right now**
 
 A media intelligence platform that reads the Danish news cycle so a communications team doesn't have to, running entirely on hardware I control.
 
