@@ -6,8 +6,15 @@ Most days that means turning a messy flow of information into something people c
 
 **What I'm working on**
 
-- A system that reads the daily news flow, sorts it into topics and pulls out who said what, so a team starts the day with a briefing instead of a pile of articles
-- Running the whole thing myself: my own Postgres, my own server, encrypted backups three times a day and alerts within a couple of minutes if anything breaks
+A media intelligence platform that reads the Danish news cycle so a communications team doesn't have to, running entirely on hardware I control.
+
+- **Local LLM pipeline:** every article goes through an open-weight model (Qwen3, served with Ollama) that pulls out topics, quotes and who said them. No data leaves the building
+- **Semantic search:** multilingual embeddings (bge-m3) stored in Postgres with pgvector, so you can search by meaning, not just keywords
+- **Entity resolution:** a journalist and source registry that untangles messy bylines and ties every quote to the right person
+- **Danish sentiment scoring** on coverage, built on a lexicon model rather than a black box
+- **Real-time collaboration:** shared case documents synced between editors with CRDTs (Yjs) over Postgres realtime
+- **Automated daily briefings** at 05:00, before anyone is awake to ask for one
+- **Ops I actually trust:** self-hosted Supabase, encrypted off-site backups three times a day, and dead-man's-switch monitoring that notices within two minutes if anything goes quiet
 
 **Things I believe**
 
